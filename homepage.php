@@ -804,7 +804,7 @@
 
           <cms:editable name="purpose_group" label="Our Purpose" type="group"/>
                 <div class="">
-                <p class=" text-theme-colored2 mt-10 mb-0 font-24 text-center"><cms:editable name='purpose_text' label='Title' group='purpose_group' type='text'>Our Purpose</cms:editable></p>
+                <p class=" text-theme-colored2 mt-10 mb-0 font-24 text-center">Our Purpose</p>
                 </div><br>
                 <div class="">
                 <p class="text-center font-20"><cms:editable name='purpose_text' label='Purpose' group='purpose_group' type='textarea'>To create a truly south-to-south consulting experience that enables financial service providers to design financial services that the mass market will choose and use.</cms:editable></p>
@@ -814,7 +814,7 @@
             <cms:editable name="mission_group" label="Our Mission" type="group"/>
 
                 <div class="">
-                    <p class=" text-theme-colored2 mt-10 mb-0 font-24 text-center"> <cms:editable name='mission_text' label='Title' group='mission_group' type='text'>Our Mission</cms:editable></p>
+                    <p class=" text-theme-colored2 mt-10 mb-0 font-24 text-center"> Our Mission</p>
                     </div><br>
                     <div class="">
                     <p class="text-center font-20"><cms:editable name='mission_text' label=' Our Mission' group='mission_group' type='textarea'>To help ensure total financial inclusion in Africa, Asia and the Pacific by 2030.</cms:editable></p>
@@ -822,25 +822,24 @@
 
             <cms:editable name="culture_group" label="Our Culture" type="group"/>
                 <div class="">
-                    <p class="text-theme-colored2 mt-10 mb-0 font-24 text-center"><cms:editable name='culture_text' label='Title' group='culture_group' type='text'>Our Culture</cms:editable></p>
+                    <p class="text-theme-colored2 mt-10 mb-0 font-24 text-center">Our Culture</p>
                     </div><br>
                     <div class="">
                     <p class="lead text-center font-20"><cms:editable name='culture_text' label='Our Culture' group='"culture_group' type='textarea'>At Seven-Delta, We want to build the most impactful consulting team at helping developing economies to financially include the unbanked and the underbanked Below are our three cultural tenets.</cms:editable></p>
                     </div>
                 </div>
 
-          <div class="row mt-40">
-            <div class="col-sm-6 col-md-4 maxwidth500 mb-sm-40">
-              <div class="box-hover-effect effect-siberia">
-                <div class="effect-wrapper">
-                <cms:editable name="diversity_group" label="Diversity" type="group"/>
-                    <div class="thumb">
-                        <img class="img-fullwidth" src="<cms:editable name='diversity_image' label='Diversity Image' width='4032' height='1960' group='diversity_group' type='image'>images/20181016_100127.jpg</cms:editable>" alt="project">
-                    </div>
-                    <div class="info-box">
-
+                <div class="row mt-40">
+                  <div class="col-sm-6 col-md-4 maxwidth500 mb-sm-40">
+                    <div class="box-hover-effect effect-siberia">
+                      <div class="effect-wrapper">
+                      <cms:editable name="diversity_group" label="Diversity" type="group"/>
+                          <div class="thumb">
+                          <img class="img-fullwidth" src="<cms:editable name='diversity_image' label='Diversity Image' width='4032' height='1960' group='diversity_group' type='image'>images/20181016_100127.jpg</cms:editable>" alt="project">
+                        </div>
+                      <div class="info-box">
                             <div class="info-title bg-theme-colored-transparent-9">
-                            <h3 class="title text-white mt-0"><cms:editable name='diversity_text' label='Title' group='diversity_group' type='text'>Diversity</cms:editable></h3>
+                            <h3 class="title text-white mt-0">Diversity</h3>
                             </div>
                             <div class="info-content text-white bg-theme-colored-transparent-9">
                             <h3 class="text-white mt-0">Diversity</h3>
@@ -860,7 +859,7 @@
                     </div>
                     <div class="info-box">
                             <div class="info-title bg-theme-colored-transparent-9">
-                            <h3 class="title text-white mt-0"><cms:editable name='learning_text' label='Title' group='learning_group' type='text'>Lifelong Learning</cms:editable></h3>
+                            <h3 class="title text-white mt-0">Lifelong Learning</h3>
                             </div>
                             <div class="info-content text-white bg-theme-colored-transparent-9">
                             <h3 class="text-white mt-0">Lifelong Learning</h3>
@@ -881,10 +880,11 @@
                   </div>
                   <div class="info-box">
                         <div class="info-title bg-theme-colored-transparent-9">
-                        <h3 class="title text-white mt-0"><cms:editable name='beyond_text' label='Title' group='beyond_group' type='text'>Going beyond</cms:editable></h3>
+                        <h3 class="title text-white mt-0">Going beyond</h3>
                         </div>
                         <div class="info-content text-white bg-theme-colored-transparent-9">
                         <h3 class="text-white mt-0">Going beyond</h3>
+                        
                         <p><cms:editable name='beyond_text' label='Going Beyond' group='beyond_group' type='textarea'>We are committed to continually seeking and applying new knowledge through research insights and people</cms:editable></p>
                         </div>
                   </div>
