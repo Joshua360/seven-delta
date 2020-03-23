@@ -18,7 +18,7 @@
               <ol class="breadcrumb text-black mt-10">
                 <li class="text-white"><a class="text-white" href="homepage.php">Home</a></li>
                 <li><a class="text-white" href="#">Contact Us</a></li>
-                <!-- <li class="active"><a class="text-white" href="contact.php">Connect with Us</a></li> -->
+                <li class="active"><a class="text-white" href="contact.php">Connect with Us</a></li>
               </ol>
             </div>
           </div>
@@ -72,20 +72,31 @@
         <div class="row pt-30">
           <div class="col-md-7">
             <h3 class="line-bottom mt-0 mb-30">Interested in discussing?</h3>
-            
+            <style>
+            .error,
+	          .success{display:none;}
+            </style>
             <!-- Contact Form -->
-            <form id="contact_form" name="contact_form" class="" action="includes/sendmail.php" method="post">
+            <cms:form id="contact_form" name="contact_form" class="" action="" method="post">
               <div class="row">
                 <div class="col-sm-6">
                   <div class="form-group">
                     <label>Name <small>*</small></label>
-                    <input name="form_name" class="form-control" type="text" placeholder="Enter Name" required="">
+                    <cms:input name="form_name" class="form-control required" type="text" placeholder="Enter Name" required="1" />
+                    <cms:if k_error_form_name>
+                    <p id='name_error' class='error' style="display:block;">Insert your name</p>
+                    </cms:if>
+
                   </div>
                 </div>
                 <div class="col-sm-6">
                   <div class="form-group">
                     <label>Email <small>*</small></label>
-                    <input name="form_email" class="form-control required email" type="email" placeholder="Enter Email">
+                    <cms:input name="form_email" class="form-control required email" type="text" placeholder="Enter Email"  required="1" validator="email" />
+                    <cms:if k_error_form_email>
+                      <p id='email_error' class='error' style="display:block;">Enter a valid email address</p>
+                    </cms:if>
+
                   </div>
                 </div>
               </div>
@@ -93,27 +104,52 @@
                 <div class="col-sm-6">
                   <div class="form-group">
                     <label>Subject <small>*</small></label>
-                    <input name="form_subject" class="form-control required" type="text" placeholder="Enter Subject">
+                    <cms:input name="form_subject" class="form-control required" type="text" placeholder="Enter Subject"  required="1" />
+                    <cms:if k_error_form_subject>
+                    <p id='name_error' class='error' style="display:block;">This field is required</p>
+                    </cms:if>
+
                   </div>
                 </div>
                 <div class="col-sm-6">
                   <div class="form-group">
                     <label>Phone</label>
-                    <input name="form_phone" class="form-control required" type="text" placeholder="Enter Phone">
+                    <cms:input name="form_phone" class="form-control required" type="text" placeholder="Enter Phone"  required="1" />
+                    <cms:if k_error_form_phone>
+                    <p id='name_error' class='error' style="display:block;">Insert your phone number</p>
+                    </cms:if>
+
                   </div>
                 </div>
               </div>
               <div class="form-group">
                 <label>Message</label>
-                <textarea name="form_message" class="form-control required" rows="5" placeholder="Enter Message"></textarea>
+                <cms:input type="textarea" name="form_message" class="form-control required" rows="5" placeholder="Enter Message"  required="1"></cms:input>
+                <cms:if k_error_form_message>
+                <p id='message_error' class='error' style="display:block;">Enter a message</p>
+                </cms:if>
               </div>
               <div class="form-group">
-                <input name="form_botcheck" class="form-control" type="hidden" value="" />
-                <button type="submit" class="btn btn-dark btn-theme-colored btn-flat" data-loading-text="Please wait...">Send your message</button>
+
+                <cms:input name="form_botcheck" class="form-control" type="hidden" value="" />
+                <cms:if k_success>
+                    <p id='mail_success' class='success' style="display:block;">Thank you. We'll get back to you as soon as possible.</p>
+                    <cms:send_mail from=k_email_from to=k_email_to subject="Feedback from your website">
+                        The following is an email sent by a visitoe to your site:
+                        <cms:show k_success />
+                    </cms:send_mail>
+                </cms:if>
+
+
+
+					      <p id='mail_fail' class='error'>Sorry, an error has occured. Please try again later.</p>
+
+                <cms:input type="submit" class="btn btn-dark btn-theme-colored btn-flat" data-loading-text="Please wait..."  name="submit" value="Send your message"/>
+
               </div>
-            </form>
+            </cms:form>
             <!-- Contact Form Validation-->
-            <script type="text/javascript">
+            <!-- <script type="text/javascript">
               $("#contact_form").validate({
                 submitHandler: function(form) {
                   var form_btn = $(form).find('button[type="submit"]');
@@ -135,7 +171,7 @@
                   });
                 }
               });
-            </script>
+            </script> -->
 
           </div>
           <div class="col-md-5">
@@ -180,6 +216,5 @@
 <!-- Footer -->
   <?php include 'inc/footer.php';?>
 
-  <?php COUCH::invoke(); ?>
 
-	
+	<?php COUCH::invoke(); ?>
