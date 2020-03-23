@@ -825,7 +825,7 @@
                     <p class="text-theme-colored2 mt-10 mb-0 font-24 text-center">Our Culture</p>
                     </div><br>
                     <div class="">
-                    <p class="lead text-center font-20"><cms:editable name='culture_text' label='Our Culture' group='"culture_group' type='textarea'>At Seven-Delta, We want to build the most impactful consulting team at helping developing economies to financially include the unbanked and the underbanked Below are our three cultural tenets.</cms:editable></p>
+                    <p class="lead text-center font-20"><cms:editable name='culture_text' label='Our Culture' group='culture_group' type='textarea'>At Seven-Delta, We want to build the most impactful consulting team at helping developing economies to financially include the unbanked and the underbanked Below are our three cultural tenets.</cms:editable></p>
                     </div>
                 </div>
 
@@ -884,7 +884,7 @@
                         </div>
                         <div class="info-content text-white bg-theme-colored-transparent-9">
                         <h3 class="text-white mt-0">Going beyond</h3>
-                        
+
                         <p><cms:editable name='beyond_text' label='Going Beyond' group='beyond_group' type='textarea'>We are committed to continually seeking and applying new knowledge through research insights and people</cms:editable></p>
                         </div>
                   </div>
