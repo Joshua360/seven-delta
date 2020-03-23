@@ -1,0 +1,66 @@
+[
+    {
+        "name": "tomwalder/php-gds",
+        "version": "v4.1.2",
+        "version_normalized": "4.1.2.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/tomwalder/php-gds.git",
+            "reference": "cbba45ef7d7289bdcbbdc4c0eb83ddd0d6af7f4c"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/tomwalder/php-gds/zipball/cbba45ef7d7289bdcbbdc4c0eb83ddd0d6af7f4c",
+            "reference": "cbba45ef7d7289bdcbbdc4c0eb83ddd0d6af7f4c",
+            "shasum": ""
+        },
+        "require": {
+            "ext-bcmath": "*",
+            "php": ">=5.5.0"
+        },
+        "require-dev": {
+            "google/appengine-php-sdk": ">=1.9.22",
+            "google/auth": "v1.0.*",
+            "phpunit/phpunit": "~4.8",
+            "satooshi/php-coveralls": "v2.0.*"
+        },
+        "suggest": {
+            "google/auth": "If you need to use the REST API (i.e. not on AppEngine Standard) Tested with v1.0.1"
+        },
+        "time": "2020-03-11T07:35:24+00:00",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "classmap": [
+                "src/"
+            ],
+            "psr-4": {
+                "GDS\\": "src/GDS/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "include-path": [
+            "src/"
+        ],
+        "license": [
+            "Apache-2.0"
+        ],
+        "authors": [
+            {
+                "name": "Tom Walder",
+                "email": "twalder@gmail.com"
+            }
+        ],
+        "description": "Google Cloud Datastore Library for PHP. Also Firestore in Datastore mode.",
+        "homepage": "https://github.com/tomwalder/php-gds",
+        "keywords": [
+            "appengine",
+            "cloud datastore",
+            "datastore",
+            "firestore",
+            "gae",
+            "google",
+            "nosql"
+        ]
+    }
+]
