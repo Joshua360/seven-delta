@@ -1053,7 +1053,6 @@
     
     <div class="row mtli-row-clearfix">
     <cms:pages masterpage='expertise.php' >
-
       <div class="col-xs-12 col-sm-6 col-md-4">
         <div class="service-box icon-box iconbox-theme-colored bg-white p-30 mb-30 border-1px">
           <a class="icon icon-dark border-left-theme-colored2-3px pull-left flip mb-0 mr-0 mt-5" href="<cms:show k_page_link />">
@@ -1066,7 +1065,6 @@
       </div>
       </cms:pages>
       
-
     </div>
   </div>
 </section>
