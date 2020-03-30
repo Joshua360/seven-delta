@@ -5,7 +5,7 @@
     <cms:editable name="header_picture" type='image'/>
     <cms:editable name="examples" type='richtext'/>
     <cms:editable name="icon_image" label="Icon" type='image'/>
-    <cms:editable name="white_icon" label="White Icon" type='image'/>
+    <!-- <cms:editable name="white_icon" label="White Icon" type='image'/> -->
 
 </cms:template>
 <cms:if k_is_page>
